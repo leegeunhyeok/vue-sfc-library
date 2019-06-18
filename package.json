@@ -15,6 +15,13 @@
     "build:es": "rollup --config build/rollup.config.js --format es --file lib/vest.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file lib/vest.min.js"
   },
+  "files": [
+    "build/*",
+    "lib/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leegeunhyeok/vue-sfc-library.git"
