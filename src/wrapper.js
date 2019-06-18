@@ -1,11 +1,11 @@
 // Import vue component
-import vest from './vest.vue'
+import Vest from './Vest.vue'
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
 	if (install.installed) return
 	install.installed = true
-	Vue.component('Vest', vest)
+	Vue.component('Vest', Vest)
 }
 
 // Create module definition for Vue.use()
