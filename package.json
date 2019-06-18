@@ -2,9 +2,17 @@
   "name": "vue-sfc-library",
   "version": "1.0.0",
   "description": "Vue.js SFC build example",
-  "main": "index.js",
+  "main": "dist/vest.umd.js",
+  "module": "dist/vest.esm.js",
+  "unpkg": "dist/vest.min.js",
+  "browser": {
+    "./sfc": "src/vest.vue"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file lib/vest.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file lib/vest.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file lib/vest.min.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +27,12 @@
   "bugs": {
     "url": "https://github.com/leegeunhyeok/vue-sfc-library/issues"
   },
-  "homepage": "https://github.com/leegeunhyeok/vue-sfc-library#readme"
+  "homepage": "https://github.com/leegeunhyeok/vue-sfc-library#readme",
+  "devDependencies": {
+    "rollup": "^1.15.6",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-vue": "^5.0.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
 }
