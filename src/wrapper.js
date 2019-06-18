@@ -1,5 +1,5 @@
 // Import vue component
-import Vest from './Vest.vue'
+import Vest from './components/Vest.vue'
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
@@ -25,4 +25,6 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default component
+export default {
+  Vest
+}
