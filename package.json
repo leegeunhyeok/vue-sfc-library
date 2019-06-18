@@ -1,0 +1,23 @@
+{
+  "name": "vue-sfc-library",
+  "version": "1.0.0",
+  "description": "Vue.js SFC build example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leegeunhyeok/vue-sfc-library.git"
+  },
+  "keywords": [
+    "vue",
+    "sfc"
+  ],
+  "author": "Geunhyeok LEE <dev.ghlee@gmail.com> (https://github.com/leegeunhyeok)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leegeunhyeok/vue-sfc-library/issues"
+  },
+  "homepage": "https://github.com/leegeunhyeok/vue-sfc-library#readme"
+}
