@@ -26,6 +26,9 @@ export default {
   created () {
     this.loop = setInterval(this.changeColor, 500)
   },
+  beforeDestroy () {
+    clearInterval(this.loop)
+  },
   methods: {
     changeColor () {
       let idx = this.colorList.indexOf(this.currentColor)
