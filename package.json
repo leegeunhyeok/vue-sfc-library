@@ -1,6 +1,6 @@
 {
   "name": "vue-sfc-library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue.js SFC build example",
   "main": "dist/vest.umd.js",
   "module": "dist/vest.esm.js",
@@ -17,7 +17,7 @@
   },
   "files": [
     "build/*",
-    "lib/*",
+    "dist/*",
     "src/*",
     "*.json",
     "*.js"
