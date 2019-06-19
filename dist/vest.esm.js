@@ -167,7 +167,7 @@ __vue_render__._withStripped = true;
   /* style */
   var __vue_inject_styles__ = function (inject) {
     if (!inject) { return }
-    inject("data-v-8edf2d06_0", { source: "\n.vest {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  color: cornflowerblue;\n}\r\n", map: {"version":3,"sources":["D:\\Source\\vue-sfc-library\\src\\components\\Vest.vue"],"names":[],"mappings":";AAkBA;EACA,eAAA;EACA,iBAAA;EACA,qBAAA;AACA","file":"Vest.vue","sourcesContent":["<template>\r\n  <div class=\"vest\">\r\n    {{ message }}\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'vest',\r\n  data () {\r\n    return {\r\n      message: 'Vue tEST'\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style>\r\n.vest {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  color: cornflowerblue;\r\n}\r\n</style>\r\n"]}, media: undefined });
+    inject("data-v-7cb2531e_0", { source: ".vest {\n  font-size: 2rem;\n  font-weight: bold;\n  color: cornflowerblue;\n}\n\n/*# sourceMappingURL=Vest.vue.map */", map: {"version":3,"sources":["D:\\Source\\vue-sfc-library\\src\\components\\Vest.vue","Vest.vue"],"names":[],"mappings":"AAkBA;EACA,eAAA;EACA,iBAAA;EACA,qBAAA;ACjBA;;AAEA,mCAAmC","file":"Vest.vue","sourcesContent":["<template>\r\n  <div class=\"vest\">\r\n    {{ message }}\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'vest',\r\n  data () {\r\n    return {\r\n      message: 'Vue tEST'\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style lang=\"scss\">\r\n.vest {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  color: cornflowerblue;\r\n}\r\n</style>\r\n",".vest {\n  font-size: 2rem;\n  font-weight: bold;\n  color: cornflowerblue;\n}\n\n/*# sourceMappingURL=Vest.vue.map */"]}, media: undefined });
 
   };
   /* scoped */
@@ -202,7 +202,30 @@ var script$1 = {
   name: 'vroduct',
   data: function data () {
     return {
-      message: 'Vue pRODUCT'
+      message: 'Vue pRODUCT',
+      loop: null,
+      colorList: [
+        'red',
+        'orange',
+        'yellow',
+        'green',
+        'blue',
+        'navy',
+        'purple'
+      ],
+      currentColor: 'red'
+    }
+  },
+  created: function created () {
+    this.loop = setInterval(this.changeColor, 500);
+  },
+  methods: {
+    changeColor: function changeColor () {
+      var idx = this.colorList.indexOf(this.currentColor);
+      if (idx + 1 === this.colorList.length) {
+        idx = -1;
+      }
+      this.currentColor = this.colorList[++idx];
     }
   }
 };
@@ -215,9 +238,11 @@ var __vue_render__$1 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "vroduct" }, [
-    _vm._v("\n  " + _vm._s(_vm.message) + "\n")
-  ])
+  return _c(
+    "div",
+    { staticClass: "vroduct", style: { backgroundColor: _vm.currentColor } },
+    [_vm._v("\n  " + _vm._s(_vm.message) + "\n")]
+  )
 };
 var __vue_staticRenderFns__$1 = [];
 __vue_render__$1._withStripped = true;
@@ -225,7 +250,7 @@ __vue_render__$1._withStripped = true;
   /* style */
   var __vue_inject_styles__$1 = function (inject) {
     if (!inject) { return }
-    inject("data-v-9ad76c50_0", { source: "\n.vroduct {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  color: crimson;\n}\r\n", map: {"version":3,"sources":["D:\\Source\\vue-sfc-library\\src\\components\\Vroduct.vue"],"names":[],"mappings":";AAkBA;EACA,eAAA;EACA,iBAAA;EACA,cAAA;AACA","file":"Vroduct.vue","sourcesContent":["<template>\r\n  <div class=\"vroduct\">\r\n    {{ message }}\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'vroduct',\r\n  data () {\r\n    return {\r\n      message: 'Vue pRODUCT'\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style>\r\n.vroduct {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  color: crimson;\r\n}\r\n</style>\r\n"]}, media: undefined });
+    inject("data-v-1be667fd_0", { source: ".vroduct {\n  font-size: 2rem;\n  font-weight: bold;\n  -webkit-transition: 0.3s;\n  -moz-transition: 0.3s;\n  -ms-transition: 0.3s;\n  -o-transition: 0.3s;\n  transition: 0.3s;\n}\n\n/*# sourceMappingURL=Vroduct.vue.map */", map: {"version":3,"sources":["D:\\Source\\vue-sfc-library\\src\\components\\Vroduct.vue","Vroduct.vue"],"names":[],"mappings":"AA2CA;EACA,eAAA;EACA,iBAAA;EACA,wBALA;EAMA,qBANA;EAOA,oBAPA;EAQA,mBARA;EASA,gBATA;ACjCA;;AAEA,sCAAsC","file":"Vroduct.vue","sourcesContent":["<template>\r\n  <div class=\"vroduct\" :style=\"{ backgroundColor: currentColor }\">\r\n    {{ message }}\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'vroduct',\r\n  data () {\r\n    return {\r\n      message: 'Vue pRODUCT',\r\n      loop: null,\r\n      colorList: [\r\n        'red',\r\n        'orange',\r\n        'yellow',\r\n        'green',\r\n        'blue',\r\n        'navy',\r\n        'purple'\r\n      ],\r\n      currentColor: 'red'\r\n    }\r\n  },\r\n  created () {\r\n    this.loop = setInterval(this.changeColor, 500)\r\n  },\r\n  methods: {\r\n    changeColor () {\r\n      let idx = this.colorList.indexOf(this.currentColor)\r\n      if (idx + 1 === this.colorList.length) {\r\n        idx = -1\r\n      }\r\n      this.currentColor = this.colorList[++idx]\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style lang=\"scss\">\r\n$duration: .3s;\r\n\r\n.vroduct {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  -webkit-transition: $duration;\r\n     -moz-transition: $duration;\r\n      -ms-transition: $duration;\r\n       -o-transition: $duration;\r\n          transition: $duration;\r\n}\r\n</style>\r\n",".vroduct {\n  font-size: 2rem;\n  font-weight: bold;\n  -webkit-transition: 0.3s;\n  -moz-transition: 0.3s;\n  -ms-transition: 0.3s;\n  -o-transition: 0.3s;\n  transition: 0.3s;\n}\n\n/*# sourceMappingURL=Vroduct.vue.map */"]}, media: undefined });
 
   };
   /* scoped */
