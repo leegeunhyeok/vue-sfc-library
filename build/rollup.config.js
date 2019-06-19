@@ -4,11 +4,14 @@ import buble from 'rollup-plugin-buble' // Transpile/polyfill with reasonable br
 export default {
   input: 'src/wrapper.js', // Path relative to package.json
   output: {
-    name: 'Vest',
-    exports: 'named'
+    name: 'Vest'
   },
   plugins: [
-    commonjs(),
+    commonjs({
+      namedExports: {
+
+      }
+    }),
     vue({
       css: true, // Dynamically inject css as a <style> tag
       compileTemplate: true // Explicitly convert template to render function
