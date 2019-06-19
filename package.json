@@ -11,9 +11,9 @@
   "scripts": {
     "dev": "vue serve --open src/App.vue",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file lib/vest.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file lib/vest.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file lib/vest.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vest.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vest.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vest.min.js"
   },
   "files": [
     "build/*",
