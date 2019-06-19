@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .vest {
   font-size: 2rem;
   font-weight: bold;
