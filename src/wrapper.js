@@ -1,5 +1,6 @@
 // Import vue component
 import Vest from './components/Vest.vue'
+import Vroduct from './components/Vroduct.vue'
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
@@ -26,5 +27,6 @@ if (GlobalVue) {
 
 // To allow use as module (npm/webpack/etc.) export component
 export {
-  Vest
+	Vest,
+	Vroduct
 }
